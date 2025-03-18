@@ -1,0 +1,76 @@
+* {
+    box-sizing:border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing:auto;
+  font-weight:<weight>;
+  font-style:normal;
+
+  color-scheme:light dark; 
+  
+  /* background-image:url("tiled-bg.png"); */ 
+  
+  /*background-image:linear-gradient(pink, purple);*/ 
+}
+
+h1{
+    text-shadow:4px 0 0 rgb(217, 91, 112); 
+    background-color:grey; 
+    box-shadow:10px 10px 20px 50px #cccccc;
+}
+
+details{
+    border:1px solid black;
+    border-radius:10px; /* rounding the corners */
+    margin-bottom:1rem;
+}
+
+details summary{
+    background-color:grey;
+    color:white;
+    border-radius:10px;
+}
+
+/*styling the dialog box when it is clicked open*/ 
+dialog{
+    border:3px solid pink;
+    background-color:light-dark(white, black); 
+}
+
+dialog::backdrop{  /* 2 colons is a psuedo class */
+    background-color:black;
+    opacity:0.75;
+
+}
+
+#hero{
+    border:1px solid black;
+    background-image:url("banff.webp");
+    background-repeat:no-repeat;
+    width:700px;
+    height:467px;
+}
+
+#hero h2{
+    background-color:black;
+    color:white;
+}
+
+@media (prefers-color-scheme:dark) {
+    body{
+        background-color:black;
+        color:white;
+    }
+
+}
+
+@media (prefers-color-scheme:light) {
+    body{
+        background-color:white;
+        color:black;
+    }
+
+}

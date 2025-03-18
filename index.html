@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modern UI Features</title>
+  <link rel="icon" href="favicon.png">  <!---adding a favicon to the browser tab-->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Modern Web <abbr title="User Interface">UI</abbr> Features</h1>
+    <details>
+        <summary>More Information</summary>
+        <p>This is the expanded view of the details element. This text only appears when the details element has been opened.</p>
+
+    </details>
+    <button id="openmodal">Open Modal</button>
+    <dialog id="modal">
+        <button id="closemodal">X</button>
+        <p>This is a simple modal style popup built without any java script.</p>
+
+    </dialog>
+    <!--using inline js to create a popup dialog box that we can click open and close-->
+    <section id="hero">
+        <h2>Important Title Here</h2>
+        <p>This is some copy to get you to click</p>
+        <a href="#">Buy Now</a>
+    </section>
+<script>  
+    openmodal.addEventListener('click',function(){  
+        console.log("open button pressed");
+        modal.showModal();
+    });
+    closemodal.addEventListener("click",function(){
+        modal.close();
+    }); 
+</script>
+</body>
+</html>
